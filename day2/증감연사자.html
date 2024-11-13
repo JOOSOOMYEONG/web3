@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감 연산자</title>
+</head>
+<body>
+    <script>
+        // 증감연산자 특징 : 피연산자가 한 개만 필요한 단항연산자이다.
+        //  감소연산자 : 변수--; / --변수; (위치에 따라 결과값이 달라짐)
+        //  증가연산자 : 변수++; / ++변수; (위치에 따라 결과값이 달라짐)
+
+        // ++변수; / 변수++; 의 차이점
+        // ++변수; : 먼저 ++b 가 실행되어 b의 값이 증가연산자가 먼저 실행되고, 증가된 b의 값에 a에  대입하게 된다. 
+        // 변수++; : 먼저 a에 b값을 대입한 후 b의 값을 증가시키는 연산자가 실행된다.
+
+        let num1 = 10;
+        let num2 = 20;
+        let result;
+
+        // num1--;
+        // console.log(num1)
+
+        // num1++;
+        // console.log(num1)
+
+        // result = num2++;
+        // console.log(result)
+
+        // result = ++num2;
+        // console.log(result)
+
+        result = ++num2;
+        console.log(result);
+        // ++은 1이라 먼저 1이 result 자리에 가고 num2(20)을 더해 21의 값이 나옴.
+
+        result = num2++;
+        console.log(result);
+        // 위에 21 값에서 이번에 num2(21)이 먼저 왔기 때문에 성급해서 뒤에 ++(1)은 챙기지 못하고 21의 값이 출력됨.
+        // 보이지 않지만 22이가 된 상태
+
+        result = ++num2;
+        console.log(result);
+        // 위에 num2(22 상태)에서 ++(1) 먼저 나와씨 때문에 더한 23의 값으로 출력됨.
+    </script>
+</body>
+</html>

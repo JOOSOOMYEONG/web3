@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대입 연산자</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+    
+    <script>
+        // 대입연산자 종류
+        // 1. a = b : a = b
+        // 2. a += b : a = a + b 더한 것을 대입
+        // 3. a -= b : a = a - b 뺀 것을 대입
+        // 4. a *= b : a = a * b 곱한 것을 대입
+        // 5. a /= b : a = a / b 나눈 것을 대입
+        // 6. a %= b : a = a % b 나머지를 대입
+
+        let a = 10;
+        let b = 3;
+
+        a += b;
+        console.log(a);
+
+        a -= b;
+        console.log(a);
+        // 위에 값인 13에서 3을 뺀 값인 10이 나옴
+
+        a *= b
+        console.log(a);
+        // 10에서 3을 곱해 30이 나옴
+
+        a /= b;
+        console.log(a);
+        // 30을 3으로 나누어 10이 나오고
+
+        a %= b;
+        console.log(a)
+        // 3의 최대값이 9로 10에서 9를 빼면 나머지 1이 나옴
+
+        let table = "<table border='1'>";
+            table += "<tr>";
+            table += "<td>1</td><td>2</td><td>3</td>";
+            table += "</tr>";
+            table += "</table>";
+
+            document.write(table);
+    </script>
+</body>
+</html>
