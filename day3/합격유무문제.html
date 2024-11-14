@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>합격 유무 문제</title>
+</head>
+<body>
+    <script>
+        // 합격 기준은 60점일 것 
+        // 사용자의 이름과 점수가 필요
+        // 사용자의 점수가 합격 기준을 넘었다면 사용자 이름을 넣어서 000님은 합격자입니다.success
+        // 점수가 합격 기준 미달이라면 00님은 00점 차이로 불합격입니다. failed
+
+        let normalScore = 60;
+        
+        let userName = prompt("당신의 이름을 입력해주세요.");
+        let score = prompt("당신의 점수를 입력해주세요.", "숫자만 입력해주세요.");
+        let failScore = normalScore - score;
+
+        let yourScore = score > normalScore ? " 합격입니다." : failScore + " 점 차이로 불합격입니다.";
+        document.write (userName + " 님은" + yourScore);
+    </script>
+</body>
+</html>
