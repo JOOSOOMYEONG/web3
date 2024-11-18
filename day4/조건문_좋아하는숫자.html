@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좋아하는 숫자</title>
+</head>
+<body>
+    <script>
+        // 사용자가 좋아하는 값을 입력해야 함
+        // 그 값이 50보다 같거나크다면 당신이 좋아하는 숫자는 50 이상이군요 출력
+        // 50보다 작다면 당신이 좋아하는 숫자는 50 미만이군요 출력
+
+        let likeValue = prompt("좋아하는 값을 입력")
+
+        if(likeValue >= 50){
+            document.write("당신이 좋아하는 숫자는 50 이상이군요")
+        } else {
+            document.write("당신이 좋아하는 숫자는 50 미만이군요")
+        }
+
+        // 값이 짝수라면 당신이 좋아하는 숫자는 짝수군요 출력
+        // 값이 짝수라면 당신이 좋아하는 숫자는 짝수군요 출력
+        let num = prompt("좋아하는 숫자를 입력")
+
+        if( num % 2 == 0){
+            document.write("당신이 좋아하는 숫자는 짝수")
+        } else {
+            document.write("당신이 좋아하는 숫자는 홀수")
+        }
+    </script>
+</body>
+</html>
