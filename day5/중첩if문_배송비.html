@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배송비</title>
+</head>
+<body>
+    <script>
+        /*
+         1. 사용자의 구매 금액 입력 받기.
+         2. 우리 쇼핑몰 회원인지 입력 받기.
+         3. 만약 사용자의 구매 금액이 100000원이 넘으면 사은품 제공, 배송비 5000원 출력.
+         4. 구매 금액 100000원 이상, 회원이라면 사은품 제공 무료배송 문구 출력.
+
+         5. 사용자의 구매 금액이 50000원 이상, 사용자가 회원이라면 배송비 무료.
+         6. 50000원 이상 구매, 회원이 아닐 시 배송비 5000원 부과 출력.
+         7. 50000원 이하로 구매, 모두 50000원 미만 구매로 배송비 5000원 부과.
+         */
+
+         let userPrice = prompt("구매 금액 입력");
+         let userId = confirm("쇼핑몰 회원이신가요?")
+
+         if(userPrice >= 100000){
+            document.write("100000만원 이상 구매로 사은품이 제공됩니다.");
+            
+            if(userId){
+                document.write("회원이시네요! 무료 배송입니다.");
+
+            } else {
+                document.write("비회원은 배송비 5000원이 부과됩니다.");
+
+            }
+
+         } else if(userPrice >= 50000){
+            if(userId){
+                document.write("배송비 무료입니다.");
+
+            }else {
+                document.write("배송비 5000원 부과됩니다.");
+
+            }
+         } else {
+            document.write(" 50000원 미만 구매로 배송비 5000원 부과됩니다.");
+         }
+    </script>
+</body>
+</html>
