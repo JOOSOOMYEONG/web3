@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch분 계산기</title>
+</head>
+<body>
+    <script>
+        /*
+        1. 첫 번째 숫자 입력 받기
+        2. 원하는 연산자를 입력 받기 (+, -, *, /, %)
+        3. 두 번째 숫자 입력 받기
+
+        4. 각 연산에 맞는 계산을 해서 출력하고 /을 출력했을 때 둘 중 하나의 숫자가 0이 아닐 때만 연산을 해야 함, 만약 입력 받은 숫자가 0이라면 "0으로 나눌 수 없습니다."
+        5. % 했을 때 첫 번째와 두 번째 숫자의 나머지를 출력
+
+        작성한 연산자 중 없는 연산자를 입력했다면 입력이 잘못되었습니다. 출력
+        */
+       
+        let numOne = Number(prompt("계산할 첫 번째 숫자 입력"));
+        let text = prompt("연산자 입력 (+, -, *, /, %)");
+        let numTwo = Number(prompt("계산할 두 번째 숫자 입력"));
+
+        console.log(typeof(numTwo));
+        switch(text){
+            case "+" : document.write(`결과 : ${numOne + numTwo} 입니다.`);
+            break;
+            
+            case "-" : document.write(`결과 : ${numOne - numTwo} 입니다.`);
+            break;
+
+            case "*" : document.write(`결과 : ${numOne * numTwo} 입니다.`);
+            break;
+
+            case "/" :
+                if(numTwo === 0 || numOne === 0 ){
+                document.write("0으로 나눌 수 없습니다.");
+                }else{
+                    document.write(`결과 : ${numOne / numTwo} 입니다.`);
+                }
+            break;
+
+            case "%" : document.write(`결과 : ${numOne % numTwo} 입니다.`);
+            break;
+
+            default : alert("입력이 잘못되었습니다.");
+        }
+
+    </script>
+</body>
+</html>

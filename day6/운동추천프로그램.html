@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운동 추천 프로그램</title>
+</head>
+<body>
+    <script>
+        /*
+        1. 사용자의 운동 난이도 (높음 / 중간 / 낮음)
+        2. 사용자의 운동 유형 입력 받기 (무산소 / 유산소)
+        3. 높음
+        - 무 / 고강도 무산소 운동인 웨이트 추천
+        - 유 / 고강도 유산소 운동인 마라톤 또는 수영을 추천
+        - 외 / 유효하지 않은 운동입니다. 무산소, 유산소 중 택 1
+        4. 중간
+        - 무 / 중간 강도의 무산소 운동인 맨몸스쿼트
+        - 유 / 중간 강도의 유산소 운동인 자전거타기, 빨리걷기 등을 추천
+        - 외 / 유효하지 않은 운동입니다. 무산소, 유산소 중 택 1
+        5. 낮음
+        - 무 / 저강도 무산소 운동인 가벼운 스트레칭 또는 1분 플랭크 도전 어때요?
+        - 유 / 저강도 유산소 운동인 천천히 걷기 또는 가벼운 요가를 추천
+        - 외 / 유효하지 않은 운동입니다. 무산소, 유산소 중 택 1
+
+        유효하지 않은 체력 수준입니다. 높음 / 중간 / 낮음 중 택 1 입력하세요.
+        */
+
+    
+        let userLevel = prompt("운동 난이도를 입력하세요.", "높음 / 중간 / 낮음");
+        let userEx = prompt("운동 유형을 입력하세요.", "무산소 / 유산소");
+
+        if(userLevel === "높음"){
+            if(userEx === "무산소"){
+                document.write("고강도 무산소 운동인 웨이트를 추천합니다!");
+
+            } else if(userEx === "유산소"){
+                document.write("고강도 유산소 운동인 마라톤 또는 수영을 추천합니다!");
+
+            } else {
+                document.write("유효하지 않은 운동입니다. 무산소, 유산소 중 택 1");
+            }
+        } else if(userLevel === "중간"){
+            if(userEx ==="무산소"){
+                document.write("중간 강도의 무산소 운동인 맨몸스쿼트를 추천합니다!");
+
+            } else if(userEx === "유산소"){
+                document.write("중간 강도의 유산소 운동인 자전거타기, 빨리걷기 등을 추천합니다!");
+
+            } else {
+                document.write("유효하지 않은 운동입니다. 무산소, 유산소 중 택 1");
+            }
+        } else if(userLevel === "낮음"){
+            if(userEx ==="무산소"){
+                document.write("저강도 무산소 운동인 가벼운 스트레칭 또는 1분 플랭크 도전 어때요?");
+
+            } else if(userEx === "유산소"){
+                document.write("저강도 유산소 운동인 천천히 걷기 또는 가벼운 요가를 추천합니다!");
+
+            } else {
+                document.write("유효하지 않은 운동입니다. 무산소, 유산소 중 택 1");
+            }
+        } else{
+            document.write("유효하지 않은 체력 수준입니다. 높음 / 중간 / 낮음 중 택 1 입력하세요.");
+        }
+    </script>
+</body>
+</html>
