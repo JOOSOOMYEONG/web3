@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+</head>
+<body>
+    <script>
+        let num1 = Number(prompt("첫 번째 숫자"));
+        let operator = prompt("연산자 입력", "+, -, *, /, %");
+        let num2 = Number(prompt("두 번째 숫자"));
+
+        switch(operator){
+            case "+" : document.write(num1 + num2);
+            // case "+" / 사용자 +를 입력했다면 ~를 작동시켜
+            break;
+            case "-" : document.write(num1 - num2);
+            break;
+            case "*" : document.write(num1 * num2);
+            break;
+            case "/" :
+                if(num1 === 0 || num2 === 0){
+                    // &&가 안 되는 이유는 0/0일 때만 작동하게 됨.
+                    document.write("0으로 나눌 수 없습니다.");
+                } else {
+                    document.write(num1 / num2);
+                }
+            break;
+            case "%" : document.write(num1 % num2);
+            break;
+
+            default : alert("입력이 잘못되었습니다.");
+        }
+    </script>
+</body>
+</html>
