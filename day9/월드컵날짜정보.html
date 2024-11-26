@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>월드컵 날짜 정보</title>
+</head>
+<body>
+    <script>
+        // 특정날짜이론
+        // 참조변수 = new Date("연-월-일");("연/월/일")
+        // let stringDate = new Date("2002-05-31");
+        // 대부분의 브라우저는 2002년 5월 31일로 해석한다.
+        // 문자열 형식으로 작성하는 방법 (ISO 8601 표준권장) 안전함(숫자형으로 작성하는 것보다 안전)
+
+        let worldcup = new Date("2002-05-31");
+        
+        let worldcupFullYear = worldcup.getFullYear(),
+            worldcupMomth = worldcup.getMonth() + 1,
+            worldcupDate = worldcup.getDate(),
+            worldcupDay = worldcup.getDay();
+
+        document.write("<h2>2002 월드컵 날짜 정보</h2>");
+        document.write(`년도 : ${worldcupFullYear} <br>`);
+        document.write(`월 : ${worldcupMomth} <br>`);
+        document.write(`일 : ${worldcupDate} <br>`);
+        document.write(`요일 : ${worldcupDay}`);
+    </script>
+</body>
+</html>
