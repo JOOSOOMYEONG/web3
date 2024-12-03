@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열객체 평균 실습</title>
+</head>
+<body>
+    <script>
+        /*
+        학생 배열 안에 객체 만들기
+        엘사 85 모아나 82 에리얼 78 라푼젤 63
+
+        평균 점수를 계산하기 위해 총합 점수를 저장할 totalScore = 0;을 만들어놓고 FOR문 사용해서 학생들의 점수를 반복하며 totalScore 더한다.
+        */
+
+
+        let students = [
+            {name : "엘사", score :85},
+            {name : "모아나", score :92},
+            {name : "에리얼", score :78},
+            {name : "라푼젤", score :63}
+         ];
+
+        console.log(students);
+
+
+        let totalScore = 0;
+
+        for(let i = 0; i < students.length; i++){
+            // length(길이)로 학생 수를 구함
+            totalScore += students[i].score;
+            // 위에서 객체만큼 돌고 있으니까 students[i].score로 모든 객체의 더한 값을 구하게 된다.
+            console.log(totalScore)
+        }
+
+        let avgScore = totalScore / students.length;
+        console.log(avgScore);
+
+        let roundScore = Math.round(avgScore);
+        console.log(roundScore);
+        document.write(` 평균 점수 : ${ roundScore}<br>`)
+
+        // 최고점수
+        let highScore = 0;
+        let topStudant;
+
+        for(let i = 0; i < students.length; i++){
+            if(students[i].score > highScore){
+                highScore = students[i].score;
+                topStudant = students[i];
+            }
+        }
+
+        document.write(`최고 점수 학생 : ${topStudant.name}<br>`);
+
+        let passedStudent = [];
+        for(let i = 0; i < students.length; i++){
+            if(students[i].score >= roundScore){
+                passedStudent.push(students[i]);
+            }
+        }
+        for(let i = 0; i < passedStudent.length; i ++){
+            document.write(`평균 점수 이상 학생 : ${passedStudent[i].name} (${passedStudent[i].score})<br>`)
+        }
+        document.write
+    </script>
+</body>
+</html>
