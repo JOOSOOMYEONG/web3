@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+    <style>
+        button {
+            background-color: rgb(48, 170, 0);
+            height: 100px;
+            width: 250px;
+            font-size: 24px;
+            font-weight: 900;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            margin: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="clearInterval(auto1)">증가 정지</button>
+    <button onclick="clearInterval(number1)">감소 정지</button>
+    <!-- onclick 메서드는 자주 쓰지 않음. -->
+
+
+    <script>
+        /*
+        setInterval(function(){자바스크립트 코드;} 일정시간 간격) : 지속적으로 일정한 시간 간격으로 함수를 호출하여 코드를 실행한다.
+        */
+
+        // 증가 버튼
+        let addNum = 0;
+        let auto1 = setInterval(() => {
+            addNum++;
+            console.log(`addNum : ${addNum}`);
+        }, 1000);
+        // 1000이 1초
+
+
+        // 감소 버튼
+        let minNum = 1001;
+        let number1 = setInterval(() => {
+            minNum--;
+            console.log(`minNum : ${minNum}`);
+        }, 1000);
+    </script>
+</body>
+</html>
